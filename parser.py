@@ -75,7 +75,7 @@ class ASN1:
             data = file.read()
             data = bytearray(data)
             data.reverse()
-            file_len = self.decoded_values[-1]
+            file_len = self.decoded_values[-1] + 1
             cipher_text_bytes = bytearray()
             for i in reversed(range(file_len)):
                 cipher_text_bytes.append(data[i])
